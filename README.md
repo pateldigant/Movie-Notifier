@@ -1,7 +1,7 @@
 # Movie Notifier
 
 This script is used for getting notification via e-mail whenever online ticket booking starts on paytm.com
-Script is pretty simple to use. Just edit the params.ini file and mention your desired city, movie, date, theatre, etc.
+Script is pretty simple to use. Just edit the params.ini file and mention your desired city, movie, date, theatre, etc. Multiple dates and multiple receiver email id's can be given.
 
 Requirements:
   - python 3.x
