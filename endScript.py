@@ -53,7 +53,7 @@ while True:
 				break
 		if res is None:
 			print('Movie not available')
-			os._exit(1)
+			#os._exit(1)
 		if res is not None:
 			for date in dates:
 				res1 = 'https://paytm.com' + re.search('href=\"(.*?)\?',res).group(1) + '?fromdate=' + date
@@ -64,12 +64,12 @@ while True:
 				showtime_list = soup2.find_all('div',class_='SbzU')
 				if theatre_name in str(showtime_list[0]).lower():
 					if send_email == 'yes':
-						sendmail(mailIds, sender_email, email_password, str(date))
+						sendmail(mailIds, sender_email, email_password, date=str(date))
 					print('Success')
-					os._exit(0)
+					#os._exit(0)
 				else:
 					print('Not available')
-					os._exit(1)
+					#os._exit(1)
 
 	except:
 		print('Some exception occured')
